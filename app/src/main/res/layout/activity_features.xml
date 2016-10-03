@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_features"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.moises.moneytextinputexample.FeaturesActivity">
+    <com.moises.moneytextinput.textInput.MoneyTextInput
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/money_text_input" />
+
+    <TextView
+        android:text="Clean amount : "
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/text_view_clean"
+        android:layout_marginTop="11dp"
+        android:layout_below="@+id/text_view_is_empty"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:text="Clean no cents: "
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/text_view_clean_no_cents"
+        android:layout_marginTop="12dp"
+        android:layout_below="@+id/text_view_clean"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:text="show results"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="23dp"
+        android:id="@+id/button_bring_all"
+        android:onClick="showResults"
+        android:layout_below="@+id/text_view_clean_no_cents"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true" />
+
+
+    <TextView
+        android:text="Is empty : "
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/text_view_is_empty"
+        android:layout_marginTop="49dp"
+        android:layout_below="@+id/money_text_input"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true" />
+    <RadioGroup
+        android:id="@+id/radio_group_max_amount"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:orientation="horizontal"
+        android:layout_below="@+id/button_bring_all"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="14dp"
+        >
+        <RadioButton
+            android:id="@+id/radio_button_100"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onRadioButtonClicked"
+            android:text="100"
+            android:textSize="13sp"/>
+
+        <RadioButton
+            android:id="@+id/radio_button_1000"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onRadioButtonClicked"
+            android:text="1,000"
+            android:textSize="13sp"
+            android:layout_below="@+id/radio_button_business"
+            android:layout_alignEnd="@+id/radio_button_business" />
+        <RadioButton
+            android:id="@+id/radio_button_10000"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onRadioButtonClicked"
+            android:text="10,000"
+            android:textSize="13sp"
+            android:layout_below="@+id/radio_button_business"
+            android:layout_alignEnd="@+id/radio_button_business" />
+    </RadioGroup>
+
+    <TextView
+        android:text="Set max amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/text_view_max_amount"
+        android:layout_below="@+id/button_bring_all"
+        android:layout_alignStart="@+id/radio_group_max_amount" />
+    <RadioGroup
+        android:id="@+id/radio_group_set_state"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:orientation="horizontal"
+        android:layout_below="@+id/radio_group_max_amount"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="14dp"
+        >
+        <RadioButton
+            android:id="@+id/radio_button_decimal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onRadioButtonClickedSetState"
+            android:text="decimal"
+            android:textSize="13sp"/>
+
+        <RadioButton
+            android:id="@+id/radio_button_whole"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onRadioButtonClickedSetState"
+            android:text="whole"
+            android:textSize="13sp"
+            android:layout_below="@+id/radio_button_business"
+            android:layout_alignEnd="@+id/radio_button_business" />
+        <RadioButton
+            android:id="@+id/radio_button_whole_no_cents"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onRadioButtonClickedSetState"
+            android:text="whole no cents"
+            android:textSize="13sp"
+            android:layout_below="@+id/radio_button_business"
+            android:layout_alignEnd="@+id/radio_button_business" />
+    </RadioGroup>
+
+    <TextView
+        android:text="Set state"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/text_view_set_state"
+        android:layout_below="@+id/radio_group_max_amount"
+        android:layout_alignStart="@+id/radio_group_max_amount" />
+
+</RelativeLayout>

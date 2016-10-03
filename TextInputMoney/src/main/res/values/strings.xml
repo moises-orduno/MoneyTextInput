@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">MoneyTextInput</string>
+
+    <string name="tag_init_amount">0.00</string>
+    <string name="tag_init_amount_no_zeroes">0</string>
+    <string name="currency_dollar">$</string>
+    <string name="currency_yen">¥</string>
+    <string name="currency_euro">€</string>
+    <string name="currency_won">₩</string>
+    <string name="currency_real">R$</string>
+    <string name="currency_pound">£</string>
+    <string name="currency_riyal">﷼</string>
+</resources>
