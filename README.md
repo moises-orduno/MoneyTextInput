@@ -34,9 +34,7 @@ The symbol in front of the amount can be change to others already set in default
 
 If you need a different symbol from the ones I have, make me know, I may update the project, or you can use the method to use your own.
 
-```java
-  moneyTextInput1.setSideTextNoSymbol("Money ");
-```
+- ```moneyTextInput.setSideTextNoSymbol("Money ");```
 
 
 ####Changing the settings
